@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>todo</title>
+    <link href="style.css" rel="stylesheet" >
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://kit.fontawesome.com/b525a6dcb0.js" crossorigin="anonymous"></script> 
+    <!-- <script src="https://kit.fontawesome.com/cb15224cfa.js" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <header class="header"></header>
+    <div class="addTask">
+        <div class="tasks">
+            <div class="task">
+                <input id = "task-name-input" class = "t_name" type="text" value="" placeholder="Task......." required>
+                <input id = "yask-description-input" class = "t_description" value="" type="text" placeholder="description......." required>
+                <select id="priority-input" class="t_priority">
+                    <option value = "High" style="color: red;">High</option>
+                    <option value = "Medium" style="color: rgb(94, 246, 244);">Medium</option>
+                    <option value = "Low" style="color: yellow;">Low</option>
+                </select>
+            </div>
+                <button id="create-task" type="submit" class="add" onclick="add()" id="add_btn">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+        </div>
+    </div>
+    <hr>
+    <div class="main_table">
+        <table>
+            <thead>
+                <th style="width: 25px;"><div class="dropdown">Priority<button class="filter-icon dropdown-btn"><i class="fa-solid fa-filter my-class"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="highFilter(this)">All</a>
+                        <a href="#" onclick="highFilter(this)">High</a>
+                        <a href="#" onclick="highFilter(this)">Medium</a>
+                        <a href="#" onclick="highFilter(this)">Low</a>
+                    </div></div>
+                </th>
+                <th style="width: 25%; ">Task</th>
+                <th>Description</th>
+                <th style="width: 15%;">Status</th>
+                <th style="width: 7%;" >Delete</th>
+                <th style="width: 7%;" >Lock</th>
+            </thead>
+            <tbody class="table_body">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
